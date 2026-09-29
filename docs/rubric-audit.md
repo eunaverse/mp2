@@ -24,10 +24,18 @@ This is an evidence map for review. It targets all 100 rubric points but does no
 - Production TypeScript/Vite build: passed.
 - Deterministic Playwright suite: 55 passed, 5 intentional skips. The skipped live-API case runs separately once, and the keyboard-only desktop scenario is skipped in the two touch projects.
 - Real TheMealDB browser smoke: passed independently.
+- Public GitHub Actions build and Pages deployment: passed.
+- Live site browser check: HTTP 200; 25 recipes loaded; search, routed details, direct-route refresh and mobile overflow check passed without browser errors.
 - `git diff --check`: passed.
 - No inline styles, inline scripts or HTML tables: enforced by test.
 - Original assignment README and deployment workflow: retained.
 
-## State still requiring external completion
+## Published project
 
-The current `origin` is the read-only course template. No student repository has been created, pushed, configured for Pages or checked live. A local pass does not establish GitHub Actions or deployment success. The student must also review and export the required LLM chatlogs, record and share the demo, and submit the grading form.
+- Repository: https://github.com/eunaverse/mp2
+- Live site: https://eunaverse.github.io/mp2/
+- Pages source: GitHub Actions workflow on `main`
+
+## State still requiring student completion
+
+The student must review and export the required LLM chatlogs, record and share the demo, and submit the grading form. These submission steps are separate from a successful deployment.
