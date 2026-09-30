@@ -22,8 +22,14 @@ export function Detail() {
   const search = params.size ? `?${params}` : '';
   const back = `/${search}#collection`;
   useEffect(() => {
-    if (recipe) document.title = `${recipe.name} — Pantry`;
-  }, [recipe]);
+    if (recipe) {
+      document.title = `${recipe.name} — Pantry`;
+    } else if (!recipeState.loading) {
+      document.title = recipeState.error
+        ? 'Recipes unavailable — Pantry'
+        : 'Recipe not found — Pantry';
+    }
+  }, [recipe, recipeState.error, recipeState.loading]);
   return (
     <article className="detail-page">
       <Link className="back-link" to={back}>

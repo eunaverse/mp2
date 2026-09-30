@@ -95,10 +95,16 @@ test('single matching recipe disables previous and next', async ({ page }) => {
 test('missing recipe and unknown route offer working recovery', async ({
   page,
 }) => {
-  await page.goto('./recipes/999');
+  await page.goto('./recipes/101');
+  await expect(page).toHaveTitle('Apple Crumble — Pantry');
+  await page.evaluate(() => {
+    window.history.pushState(null, '', '/mp2/recipes/999');
+    window.dispatchEvent(new PopStateEvent('popstate'));
+  });
   await expect(
     page.getByRole('heading', { name: 'Recipe not found' }),
   ).toBeVisible();
+  await expect(page).toHaveTitle('Recipe not found — Pantry');
   await page
     .getByRole('link', { name: 'Explore recipes', exact: true })
     .last()
