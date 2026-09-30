@@ -38,4 +38,4 @@ This is an evidence map for review. It targets all 100 rubric points but does no
 
 ## State still requiring student completion
 
-The student must review and export the required LLM chatlogs, record and share the demo, and submit the grading form. These submission steps are separate from a successful deployment.
+The privacy-filtered parent and delegated-agent LLM chatlogs are included in the repository and indexed by `llm_logs.csv`. The student must still record and share the demo, answer the LLM survey, and submit the grading form. These submission steps are separate from a successful deployment.

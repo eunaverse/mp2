@@ -9,4 +9,4 @@ Consulted project and API references:
 
 The app and test code were generated with OpenAI Codex in this conversation, then executed, debugged and verified locally. Tests contain explicitly fabricated recipe fixtures. Recipe facts shown in the application come from TheMealDB; cooking times, ratings, servings and nutritional estimates are not invented.
 
-The assignment requires the actual LLM chatlogs and responses to the LLM survey in the grading form. This disclosure is not a substitute for the chatlogs. Export this complete conversation and include it with the source submission. Declare any additional references used during later work.
+The required privacy-filtered LLM exports are included as [the parent conversation](llm-chat-log.md) and [the delegated-agent sessions](llm-subagents.md), indexed by the repository-root `llm_logs.csv`. They preserve recorded visible messages and provenance while omitting system instructions, reasoning, credentials, tool outputs, ambient context, and private filesystem paths. The student must still answer the LLM survey in the grading form and declare any additional references used during later work.

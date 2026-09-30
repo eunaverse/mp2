@@ -18,8 +18,8 @@ Live site: https://eunaverse.github.io/mp2/
 
 ## Student deliverables
 
-- [ ] Export the complete LLM chatlogs and include them with the source submission.
-- [ ] Keep the source declarations in `sources.md`; add any further references used.
+- [x] Include privacy-filtered parent and delegated-agent LLM exports with the source, indexed by `llm_logs.csv`.
+- [x] Keep the current source and LLM declarations in `sources.md`; add any further references used.
 - [ ] Record a demo no longer than three minutes. Use `demo-outline.md`.
 - [ ] Show the deployed URL at the beginning of the video.
 - [ ] Upload the video to Google Drive and share it with uiuc.web.programming@gmail.com.

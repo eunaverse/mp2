@@ -33,3 +33,16 @@ it('retains the assignment and required lockfile/deployment files', () => {
     'actions/deploy-pages',
   );
 });
+it('includes the required LLM transcript manifest and privacy-filtered exports', () => {
+  const manifest = readFileSync('llm_logs.csv', 'utf8').trim().split('\n');
+  expect(manifest).toEqual([
+    'https://github.com/eunaverse/mp2/blob/main/docs/llm-chat-log.md',
+    'https://github.com/eunaverse/mp2/blob/main/docs/llm-subagents.md',
+  ]);
+  expect(readFileSync('docs/llm-chat-log.md', 'utf8')).toContain(
+    '# MP2 LLM chat log',
+  );
+  expect(readFileSync('docs/llm-subagents.md', 'utf8')).toContain(
+    '# MP2 delegated-agent LLM logs',
+  );
+});
